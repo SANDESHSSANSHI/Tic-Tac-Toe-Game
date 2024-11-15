@@ -1,0 +1,243 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #8e44ad, #3498db);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 400px;
+  }
+  
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.title br {
+  display: block;
+  content: "";
+  margin: 10px 0;
+}
+
+  
+  .screen {
+    display: none;
+    text-align: center;
+    background: #2c3e50;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .screen.active {
+    display: block;
+  }
+  
+  .input-box {
+    width: 80%;
+    padding: 12px;
+    margin: 10px auto;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: #34495e;
+    color: #ecf0f1;
+    text-align: center;
+  }
+  
+  .input-box::placeholder {
+    color: #95a5a6;
+  }
+  
+  .symbol-selection p {
+    margin: 15px 0;
+    font-size: 1.2rem;
+  }
+  
+  .symbol-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    background: #9b59b6;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+  }
+  
+  .symbol-btn:hover {
+    background: #8e44ad;
+  }
+  
+  .start-btn {
+    padding: 12px 25px;
+    background: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background 0.3s;
+  }
+  
+  .start-btn:hover {
+    background: #229954;
+  }
+  
+  .start-btn:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+  }
+  
+  .status-text {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    background: #34495e;
+    border: 2px solid #7f8c8d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ecf0f1;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.2s ease, background 0.2s;
+  }
+  
+  .cell:hover {
+    background: #3b5998;
+    transform: scale(1.1);
+  }
+  
+  .cell.taken {
+    cursor: not-allowed;
+  }
+  
+  .reset-btn {
+    padding: 10px 20px;
+    background: green;
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s;
+  }
+  
+  .reset-btn:hover {
+    background: #e74c3c;
+  }
+  
+  /* Dialog Styling */
+  .dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  .dialog.hidden {
+    display: none;
+  }
+  
+  .dialog-content {
+    width: 80%;
+    max-width: 400px;
+    padding: 30px;
+    background: #ecf0f1;
+    color: #2c3e50;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    animation: slideDown 0.4s ease-out;
+  }
+  
+  #victory-message {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #27ae60;
+  }
+  
+  .close-btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .close-btn:hover {
+    background: #229954;
+  }
+  
+  /* Add Animation */
+  @keyframes slideDown {
+    from {
+      transform: translateY(-20%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .exit-btn {
+    padding: 10px 20px;
+    background: red;
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s;
+  }
+  
+  .exit-btn:hover {
+    background: red;
+  }
+  

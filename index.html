@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Welcome Screen -->
+    <div class="screen active" id="welcome-screen">
+<h1 class="title">
+  Welcome to <br> Tic-Tac-Toe
+</h1>
+      <input type="text" id="player1-name" class="input-box" placeholder="Enter Player 1 Name">
+      <input type="text" id="player2-name" class="input-box" placeholder="Enter Player 2 Name">
+      <div class="symbol-selection">
+        <p>Select your symbol:</p>
+        <button class="symbol-btn" data-symbol="X">X</button>
+        <button class="symbol-btn" data-symbol="O">O</button>
+      </div>
+      <button id="start-game-btn" class="start-btn" disabled>Start Game</button>
+    </div>
+
+    <!-- Game Screen -->
+    <div class="screen" id="game-screen">
+      <div class="status-text" id="status-text"></div>
+      <div class="game-board" id="game-board">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+      </div>
+      <button class="reset-btn" id="reset-btn">Restart Game</button>
+      <button class="exit-btn" id="exit-btn">Exit Game</button>
+
+    </div>
+  </div>
+
+  <!-- Victory Dialog -->
+  <div class="dialog hidden" id="victory-dialog">
+    <div class="dialog-content">
+      <div id="victory-message"></div>
+      <button class="close-btn" id="close-dialog-btn">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
